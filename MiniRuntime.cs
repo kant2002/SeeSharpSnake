@@ -102,6 +102,12 @@ namespace System.Runtime.CompilerServices
             // This will be filled in by an IL transform
             return 0;
         }
+        public static unsafe ulong StdCall<T, U, W, X>(IntPtr pfn, T* arg1, U arg2, W* arg3, X* arg4) 
+        where T : unmanaged where U : unmanaged where W : unmanaged where X : unmanaged
+        {
+            // This will be filled in by an IL transform
+            return 0;
+        }
         public static unsafe ulong StdCall<T, U, W>(IntPtr pfn, T* arg1, U* arg2, W* arg3) where T : unmanaged where U : unmanaged where W : unmanaged
         {
             // This will be filled in by an IL transform

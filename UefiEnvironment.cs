@@ -213,11 +213,11 @@ public unsafe readonly struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL
     }
     public void QueryMode(void* handle, uint ModeNumber, uint* Columns, uint* Rows)
     {
-        RawCalliHelper.StdCall(_queryMode, (byte*)handle, &ModeNumber, Columns, Rows);
+        RawCalliHelper.StdCall(_queryMode, (byte*)handle, ModeNumber, Columns, Rows);
     }
     public void SetMode(void* handle, uint ModeNumber)
     {
-        RawCalliHelper.StdCall(_setMode, (byte*)handle, &ModeNumber);
+        RawCalliHelper.StdCall(_setMode, (byte*)handle, ModeNumber);
     }
     public void SetAttribute(void* handle, uint Attribute)
     {
